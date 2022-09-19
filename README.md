@@ -12,11 +12,15 @@ compdef __start_kubectl k
 
 ```zsh
 k apply -f controllers/nginx-deployment.yaml
+# clean up
+k delete -f controllers/nginx-deployment.yaml
 ```
 ## service
 
-```
+```zsh
 k apply -f controllers/nginx-service.yaml
+# clean up
+k delete -f controllers/nginx-service.yaml
 ```
 
 ## check
@@ -28,6 +32,8 @@ k get deployments
 k get services
 # ポッド一覧確認
 k get pods
+# まとめて確認
+k get pods,services,deployments
 ```
 
 ## monitoring
