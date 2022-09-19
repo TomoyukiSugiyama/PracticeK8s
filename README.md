@@ -42,7 +42,7 @@ k -n kubernetes-dashboard create token admin-user
 # proxy
 k proxy
 # access
-http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/ 
+http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#!/login 
 # crean up
 k -n kubernetes-dashboard delete serviceaccount admin-user
 k -n kubernetes-dashboard delete clusterrolebinding admin-user
