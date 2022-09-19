@@ -13,6 +13,11 @@ compdef __start_kubectl k
 ```zsh
 k apply -f controllers/nginx-deployment.yaml
 ```
+## service
+
+```
+k apply -f controllers/nginx-service.yaml
+```
 
 ## check
 
