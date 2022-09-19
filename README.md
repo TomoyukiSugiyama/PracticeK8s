@@ -17,5 +17,10 @@ k apply -f controllers/nginx-deployment.yaml
 ## check
 
 ```zsh
-k get deployments.apps
+# デプロイメント一覧確認
+k get deployments
+# サービス一覧確認
+k get services
+# ポッド一覧確認
+k get pods
 ```
