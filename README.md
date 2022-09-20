@@ -33,7 +33,7 @@ k get services
 # ポッド一覧確認
 k get pods
 # まとめて確認
-k get pods,services,deployments
+k get all
 ```
 
 ## monitoring
