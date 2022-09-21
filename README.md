@@ -45,6 +45,8 @@ k get pods
 k get all
 # シークレット確認
 k get secrets
+# PersistentVolume 確認
+k get pvc
 ```
 
 ## monitoring
