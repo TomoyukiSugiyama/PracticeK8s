@@ -1,0 +1,4 @@
+secretGenerator:
+  - name: mysql-pass
+    literals:
+      - password=PRACTICE_K8S
