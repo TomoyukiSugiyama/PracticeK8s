@@ -15,6 +15,15 @@ k apply -f controllers/nginx-deployment.yaml
 # clean up
 k delete -f controllers/nginx-deployment.yaml
 ```
+
+## deployment wordpress
+
+```zsh
+k apply -k application/wordpress
+# clean up
+k delete -k application/wordpress
+```
+
 ## service
 
 ```zsh
