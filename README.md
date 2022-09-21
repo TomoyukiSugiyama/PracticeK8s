@@ -43,6 +43,8 @@ k get services
 k get pods
 # まとめて確認
 k get all
+# シークレット確認
+k get secrets
 ```
 
 ## monitoring
