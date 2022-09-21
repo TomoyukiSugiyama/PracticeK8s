@@ -1,3 +1,7 @@
+secretGenerator:
+  - name: mysql-pass
+    literals:
+      - password=PRACTICE_K8S
 resources:
   - mysql-deployment.yaml
   - wordpress-deployment.yaml
