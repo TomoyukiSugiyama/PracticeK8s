@@ -8,28 +8,20 @@ alias k=kubectl
 compdef __start_kubectl k
 ```
 
-## deployment
+## deploy nginx
 
 ```zsh
-k apply -f controllers/nginx-deployment.yaml
+k apply -k controllers
 # clean up
-k delete -f controllers/nginx-deployment.yaml
+k delete -k controllers
 ```
 
-## deployment wordpress
+## deploy wordpress
 
 ```zsh
 k apply -k application/wordpress
 # clean up
 k delete -k application/wordpress
-```
-
-## service
-
-```zsh
-k apply -f controllers/nginx-service.yaml
-# clean up
-k delete -f controllers/nginx-service.yaml
 ```
 
 ## check
