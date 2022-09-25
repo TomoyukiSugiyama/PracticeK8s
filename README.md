@@ -60,3 +60,12 @@ k -n kubernetes-dashboard delete clusterrolebinding admin-user
 k delete -f monitoring/crerate-service-account.yaml
 k delete -f monitoring/dashboard.yaml
 ```
+
+## debug
+
+```zsh
+# debugging pods
+k describe pods
+# debugging services
+k get endpoints
+```
