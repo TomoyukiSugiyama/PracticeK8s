@@ -68,4 +68,6 @@ k delete -f monitoring/dashboard.yaml
 k describe pods
 # debugging services
 k get endpoints
+# create a shell
+k exec -it nginx-deployment-XXXXXXXXXXXX -- sh
 ```
