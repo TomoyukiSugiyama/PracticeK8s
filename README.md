@@ -71,3 +71,23 @@ k get endpoints
 # create a shell
 k exec -it nginx-deployment-XXXXXXXXXXXX -- sh
 ```
+
+## fields
+* apiVersion ・・・ 利用する KubernetesAPI のバージョン
+* kind
+
+サンプル
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+spec:
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 80
+  selector:
+    app: nginx
+```
