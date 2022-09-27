@@ -74,7 +74,8 @@ k exec -it nginx-deployment-XXXXXXXXXXXX -- sh
 
 ## fields
 * apiVersion ・・・ 利用する KubernetesAPI のバージョン
-* kind
+* kind ・・・ オブジェクトの種類
+* metadata ・・・ オブジェクトを一意に識別するための情報、文字列の name 、 UID 、または任意の namespace 
 
 サンプル
 ```yaml
