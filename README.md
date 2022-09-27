@@ -93,3 +93,6 @@ spec:
   selector:
     app: nginx
 ```
+
+* [Pod の spec](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.25/#podspec-v1-core)
+* [Deployment の spec](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.25/#deploymentspec-v1-apps)
