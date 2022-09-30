@@ -103,3 +103,5 @@ spec:
 https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands
 
 ## install GitLab by using Helm
+
+* [Install Helm](https://helm.sh/docs/intro/install/)
