@@ -2,7 +2,7 @@ global:
   edition: ce
   hosts:
     domain: example.com
-    externalIP: 127.0.0.1
+    externalIP: 10.10.10.10
 certmanager-issuer:
   email: me@example.com
 postgresql:
