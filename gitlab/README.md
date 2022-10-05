@@ -20,3 +20,9 @@ helm upgrade -f gitlab.yaml \
   --install gitlab gitlab/gitlab \
   --timeout 600s
 ```
+
+# uninstall
+
+```zsh
+helm uninstall gitlab
+```
