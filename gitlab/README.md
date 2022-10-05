@@ -14,9 +14,11 @@ v3.10.0+gce66412
 # deploy using helm
 
 ```zsh
+k create namespace gitlab
+
 helm repo add gitlab https://charts.gitlab.io/
 helm repo update
-helm upgrade -f gitlab.yaml \
+helm upgrade -n gitlab -f gitlab.yaml \
   --install gitlab gitlab/gitlab \
   --timeout 600s
 ```
@@ -24,5 +26,5 @@ helm upgrade -f gitlab.yaml \
 # uninstall
 
 ```zsh
-helm uninstall gitlab
+helm uninstall gitlab -n gitlab
 ```
