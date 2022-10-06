@@ -1,7 +1,6 @@
 # environment
 
 ```zsh
-% kubectl version --client
 % kubectl version --client --short
 Flag --short has been deprecated, and will be removed in the future. The --short output will become the default.
 Client Version: v1.25.2
