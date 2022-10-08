@@ -15,14 +15,15 @@ v3.10.0+gce66412
 ```zsh
 helm repo add gitlab https://charts.gitlab.io/
 helm repo update
-helm upgrade -f gitlab.yaml \
+helm upgrade \
   --install gitlab gitlab/gitlab \
+  --values gitlab_config.yaml \
   --timeout 600s
 
 helm upgrade --install gitlab gitlab/gitlab \
   --timeout 600s \
   --set global.hosts.domain=example.com \
-  --set global.hosts.externalIP=10.10.10.10 \
+  --set global.hosts.externalIP=127.0.0.1 \
   --set certmanager-issuer.email=me@example.com
 ```
 
