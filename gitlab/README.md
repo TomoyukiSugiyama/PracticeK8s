@@ -19,12 +19,20 @@ helm upgrade \
   --install gitlab gitlab/gitlab \
   --values gitlab.yaml \
   --timeout 600s
+```
 
-helm upgrade --install gitlab gitlab/gitlab \
-  --timeout 600s \
-  --set global.hosts.domain=example.com \
-  --set global.hosts.externalIP=127.0.0.1 \
-  --set certmanager-issuer.email=me@example.com
+# hosts
+```bash
+% cat /etc/hosts
+127.0.0.1       gitlab.example.com registry.example.com minio.example.com
+```
+
+# Access
+
+http://gitlab.example.com:32080/
+
+```
+kubectl get secret gitlab-gitlab-initial-root-password -ojsonpath='{.data.password}' | base64 --decode ; echo
 ```
 
 # cleanup
