@@ -1,9 +1,14 @@
 global:
   edition: ce
+  ingress:
+    configureCertmanager: false
+    tls:
+      enabled: false
+    class: "nginx"
   hosts:
     domain: example.com
     https: false
-    externalIP:
+    externalIP: 127.0.0.1
     gitlab:
       name: gitlab.example.com
       https: false
@@ -32,7 +37,7 @@ gitlab-runner:
   install: false
 # Reduce replica counts, reducing CPU & memory requirements
 gitlab:
-  unicorn:
+  webservice:
     minReplicas: 1
     maxReplicas: 1
   sidekiq:
@@ -42,5 +47,8 @@ gitlab:
     minReplicas: 1
     maxReplicas: 1
 registry:
-  minReplicas: 1
-  maxReplicas: 1
+  hpa:
+    minReplicas: 1
+    maxReplicas: 1
+certmanager-issuer:
+  email: me@example.com

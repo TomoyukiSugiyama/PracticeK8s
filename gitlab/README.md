@@ -17,7 +17,7 @@ helm repo add gitlab https://charts.gitlab.io/
 helm repo update
 helm upgrade \
   --install gitlab gitlab/gitlab \
-  --values gitlab_config.yaml \
+  --values gitlab.yaml \
   --timeout 600s
 
 helm upgrade --install gitlab gitlab/gitlab \
