@@ -24,7 +24,9 @@ helm upgrade \
 # hosts
 ```bash
 % cat /etc/hosts
-127.0.0.1       gitlab.example.com registry.example.com minio.example.com
+127.0.0.1       gitlab.example.com
+127.0.0.1       registry.example.com
+127.0.0.1       minio.example.com
 ```
 
 # Access

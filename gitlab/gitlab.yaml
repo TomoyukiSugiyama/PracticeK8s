@@ -37,8 +37,6 @@ nginx-ingress:
       type: NodePort
       nodePorts:
         http: 32080
-      nodeSelector:
-        kubernetes.io/hostname: node1
 # GitLab Runner isn't a big fan of self-signed certificates
 gitlab-runner:
   install: false
