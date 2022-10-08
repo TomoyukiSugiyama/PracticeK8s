@@ -1,0 +1,61 @@
+global:
+  edition: ce
+  ingress:
+    configureCertmanager: false
+    tls:
+      enabled: false
+  hosts:
+    domain: gitlab.example.com
+    https: false
+    externalIP: 127.0.0.1
+    gitlab:
+      name: gitlab.example.com
+      https: false
+    registry:
+      name: registry.example.com
+      https: false
+    minio:
+      name: minio.example.com
+      https: false
+    smartcard:
+      name: smartcard.example.com
+    kas:
+      name: kas.example.com
+    pages:
+      name: pages.example.com
+      https: false
+    ssh: gitlab.example.com
+# Don't use certmanager, we'll self-sign
+certmanager:
+  install: false
+# Save resources, only 2 CPU
+prometheus:
+  install: false
+nginx-ingress:
+  controller:
+    service:
+      type: NodePort
+      nodePorts:
+        http: 32080
+      nodeSelector:
+        kubernetes.io/hostname: node1
+# GitLab Runner isn't a big fan of self-signed certificates
+gitlab-runner:
+  install: false
+# Reduce replica counts, reducing CPU & memory requirements
+gitlab:
+  webservice:
+    minReplicas: 1
+    maxReplicas: 1
+  sidekiq:
+    minReplicas: 1
+    maxReplicas: 1
+  gitlab-shell:
+    minReplicas: 1
+    maxReplicas: 1
+registry:
+  hpa:
+    minReplicas: 1
+    maxReplicas: 1
+certmanager-issuer:
+  email: me@example.com
