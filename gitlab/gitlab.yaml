@@ -4,9 +4,8 @@ global:
     configureCertmanager: false
     tls:
       enabled: false
-    class: "nginx"
   hosts:
-    domain: example.com
+    domain: gitlab.example.com
     https: false
     externalIP: 127.0.0.1
     gitlab:
@@ -32,6 +31,14 @@ certmanager:
 # Save resources, only 2 CPU
 prometheus:
   install: false
+nginx-ingress:
+  controller:
+    service:
+      type: NodePort
+      nodePorts:
+        http: 32080
+      nodeSelector:
+        kubernetes.io/hostname: node1
 # GitLab Runner isn't a big fan of self-signed certificates
 gitlab-runner:
   install: false
