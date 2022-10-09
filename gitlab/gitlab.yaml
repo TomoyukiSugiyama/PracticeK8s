@@ -5,7 +5,7 @@ global:
     tls:
       enabled: false
   hosts:
-    domain: gitlab.example.com
+    domain: example.com
     https: false
     externalIP: 127.0.0.1
     gitlab:
