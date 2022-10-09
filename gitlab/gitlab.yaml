@@ -10,7 +10,6 @@ global:
     externalIP: 127.0.0.1
     gitlab:
       name: gitlab.example.com
-      port: 32080
       https: false
     registry:
       name: registry.example.com
