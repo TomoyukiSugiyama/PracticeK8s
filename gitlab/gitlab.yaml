@@ -25,12 +25,14 @@ global:
       name: pages.example.com
       https: false
     ssh: gitlab.example.com
+  shell:
+    port: 32022
 # Don't use certmanager, we'll self-sign
 certmanager:
   install: false
 # Save resources, only 2 CPU
-prometheus:
-  install: false
+# prometheus:
+#   install: false
 nginx-ingress:
   controller:
     service:
@@ -41,19 +43,19 @@ nginx-ingress:
 gitlab-runner:
   install: false
 # Reduce replica counts, reducing CPU & memory requirements
-gitlab:
-  webservice:
-    minReplicas: 1
-    maxReplicas: 1
-  sidekiq:
-    minReplicas: 1
-    maxReplicas: 1
-  gitlab-shell:
-    minReplicas: 1
-    maxReplicas: 1
-registry:
-  hpa:
-    minReplicas: 1
-    maxReplicas: 1
+# gitlab:
+#   webservice:
+#     minReplicas: 1
+#     maxReplicas: 1
+#   sidekiq:
+#     minReplicas: 1
+#     maxReplicas: 1
+#   gitlab-shell:
+#     minReplicas: 1
+#     maxReplicas: 1
+# registry:
+#   hpa:
+#     minReplicas: 1
+#     maxReplicas: 1
 certmanager-issuer:
   email: me@example.com
