@@ -10,6 +10,14 @@ Kustomize Version: v4.5.7
 v3.10.0+gce66412
 ```
 
+# set hosts
+```bash
+% cat /etc/hosts
+127.0.0.1       gitlab.example.com
+127.0.0.1       registry.example.com
+127.0.0.1       minio.example.com
+```
+
 # deploy using helm
 
 ```zsh
@@ -19,14 +27,6 @@ helm upgrade \
   --install gitlab gitlab/gitlab \
   --values gitlab.yaml \
   --timeout 600s
-```
-
-# hosts
-```bash
-% cat /etc/hosts
-127.0.0.1       gitlab.example.com
-127.0.0.1       registry.example.com
-127.0.0.1       minio.example.com
 ```
 
 # Access
