@@ -27,6 +27,8 @@ global:
     ssh: gitlab.example.com
   shell:
     port: 32022
+  grafana:
+    enabled: false
 # Don't use certmanager, we'll self-sign
 certmanager:
   install: false
