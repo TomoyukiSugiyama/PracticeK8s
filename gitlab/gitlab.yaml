@@ -29,6 +29,9 @@ global:
     port: 32022
   grafana:
     enabled: false
+  pages:
+    enabled: true
+    # port: 32080
 # Don't use certmanager, we'll self-sign
 certmanager:
   install: false
