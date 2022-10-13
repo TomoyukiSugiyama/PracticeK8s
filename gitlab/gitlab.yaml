@@ -38,6 +38,10 @@ certmanager:
 # Save resources, only 2 CPU
 # prometheus:
 #   install: false
+
+# GitLab Pages
+#gitlab-pages:
+
 nginx-ingress:
   controller:
     service:
