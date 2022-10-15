@@ -29,9 +29,9 @@ global:
     port: 32022
   grafana:
     enabled: false
-  pages:
-    enabled: true
-    # port: 32080
+  # pages:
+  #   enabled: true
+  # port: 32080
 # Don't use certmanager, we'll self-sign
 certmanager:
   install: false
@@ -41,30 +41,30 @@ certmanager:
 
 # GitLab Pages
 #gitlab-pages:
-networkpolicy:
-  enabled: true
-  ingress:
-    enabled: true
-    rules:
-      - to:
-          - ipBlock:
-              cidr: 0.0.0.0/0
-        ports:
-          - port: 80
-            protocol: TCP
-          - port: 443
-            protocol: TCP
-  egress:
-    enabled: true
-    rules:
-      - to:
-          - ipBlock:
-              cidr: 10.0.0.0/8
-        ports:
-          - port: 8181
-            protocol: TCP
-          - port: 53
-            protocol: UDP
+# networkpolicy:
+#   enabled: true
+#   ingress:
+#     enabled: true
+#     rules:
+#       - to:
+#           - ipBlock:
+#               cidr: 0.0.0.0/0
+#         ports:
+#           - port: 80
+#             protocol: TCP
+#           - port: 443
+#             protocol: TCP
+#   egress:
+#     enabled: true
+#     rules:
+#       - to:
+#           - ipBlock:
+#               cidr: 10.0.0.0/8
+#         ports:
+#           - port: 8181
+#             protocol: TCP
+#           - port: 53
+#             protocol: UDP
 nginx-ingress:
   controller:
     service:
