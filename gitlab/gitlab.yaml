@@ -29,12 +29,21 @@ global:
     port: 32022
   grafana:
     enabled: false
+  pages:
+    enabled: true
+    accessControl: true
 # Don't use certmanager, we'll self-sign
 certmanager:
   install: false
 # Save resources, only 2 CPU
 # prometheus:
 #   install: false
+
+# Subchart
+# GitLab Pages
+# gitlab:
+#   gitlab-pages:
+
 nginx-ingress:
   controller:
     service:
