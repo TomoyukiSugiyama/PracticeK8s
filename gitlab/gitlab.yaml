@@ -32,7 +32,6 @@ global:
   pages:
     enabled: true
     accessControl: true
-  # port: 32080
 # Don't use certmanager, we'll self-sign
 certmanager:
   install: false
