@@ -41,30 +41,7 @@ certmanager:
 
 # GitLab Pages
 #gitlab-pages:
-# networkpolicy:
-#   enabled: true
-#   ingress:
-#     enabled: true
-#     rules:
-#       - to:
-#           - ipBlock:
-#               cidr: 0.0.0.0/0
-#         ports:
-#           - port: 80
-#             protocol: TCP
-#           - port: 443
-#             protocol: TCP
-#   egress:
-#     enabled: true
-#     rules:
-#       - to:
-#           - ipBlock:
-#               cidr: 10.0.0.0/8
-#         ports:
-#           - port: 8181
-#             protocol: TCP
-#           - port: 53
-#             protocol: UDP
+
 nginx-ingress:
   controller:
     service:
