@@ -39,8 +39,10 @@ certmanager:
 # prometheus:
 #   install: false
 
+# Subchart
 # GitLab Pages
-#gitlab-pages:
+# gitlab:
+#   gitlab-pages:
 
 nginx-ingress:
   controller:
